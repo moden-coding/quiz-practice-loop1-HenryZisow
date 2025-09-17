@@ -1,3 +1,4 @@
+
 /**
  *  Write a Java program that reads an unspecified number of integers from the user 
  *  until the user enters -1. For each number, indicate whether it is odd or even. 
@@ -9,8 +10,28 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+        int odd = 0;
+        int even = 0;
+        System.out.println("Give an integer:");
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {
+                break;
+            } else {
+                if (number % 2 == 0) {
+                    even++;
 
+                } else {
+                    if (number % 2 != 0) {
+                        odd++;
 
+                    }
+
+                }
+            }
+        }
+        System.out.println("Number of odds = " + odd);
+        System.out.println("Number of evens = " + even);
 
     }
 }
